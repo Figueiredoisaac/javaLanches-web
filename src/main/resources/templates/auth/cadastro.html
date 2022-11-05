@@ -7,27 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- 
-    <link rel="stylesheet" th:href="@{/style/style.css}" />
-    -->
-    <link rel="stylesheet" href="/src/main/resources/static/css/style.css" />
+   <link rel="stylesheet" th:href="@{/css/style.css}" />
+ <!-- 
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css" />    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet" />
 </head>
-
+<style th:inline="text">
+.bg2{
+    background-image:url([[@{/img/background-cadastro.jpg}]]);
+    background-size: cover; 
+}
+</style>
 <body class="bg2">
     <header>
         <div class="container-fluid barra-nav">
             <div class="row header-main">
                 <div class="row header-main justify-content-between">
-                    <div class="col col-4 nav-logo"><img class="nav-img" src="/src/main/resources/static/img/logo.png"
+                    <div class="col col-4 nav-logo"><img class="nav-img" th:src="@{/img/logo.png}"
                             alt="Logo JavaLanches">
                         <div class="nav-titulo">javaLanches</div>
                     </div>
-                    <div class="col col-2 "><a class="nav-entrar" href="">HOME</a></div>
+                    <div class="col col-2 "><a class="nav-entrar" href="../index">HOME</a></div>
                 </div>
             </div>
         </div>
@@ -37,33 +41,29 @@
             <div class="row main justify-content-around">
                 <div class="col-6 row card-inicial">
                     <div class="row text-align-center justify-content-center">
-                        <img class=" col-4 card-img" src="/src/main/resources/static/img/cadastro-img.png" alt="login!">
+                        <img class=" col-4 card-img" th:src="@{/img/cadastro-img.png}" alt="login!">
                         <div class=" col-4 card-titulo">CADASTRO</div>
                     </div>
 
                     <div class="text-align-center titulo-card">
-                        <form>
+                        <form action ="cadastrar" method="post">
                             <div class="row">
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="InputEmail" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail"
+                                        <input type="email" name="email" class="form-control" id="exampleInputEmail"
                                             aria-describedby="emailHelp">
                                     </div>
                                     <div class="mb-3">
                                         <label for="InputUser" class="form-label">Usuário</label>
-                                        <input type="text" class="form-control" id="InputUser"
+                                        <input type="text" name="nome" class="form-control" id="InputUser"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="InputPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="InputPassword">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="PasswordConf" class="form-label">Confime seu Password</label>
-                                        <input type="password" class="form-control" id="PasswordConf">
+                                        <input type="password" name="password" class="form-control" id="InputPassword">
                                     </div>
                                 </div>
                             </div>
