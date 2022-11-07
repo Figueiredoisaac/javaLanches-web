@@ -1,0 +1,20 @@
+body{
+    color: #886040;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header{
+    position: absolute;
+}
+
+.nav-cliente-logo{
+    color: #886040;
+    text-decoration: none;
+
+}
+
+.titulo-main{
+    font-size: 20px;
+    color: #886040;
+}
