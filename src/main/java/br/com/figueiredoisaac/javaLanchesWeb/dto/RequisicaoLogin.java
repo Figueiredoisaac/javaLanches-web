@@ -7,15 +7,15 @@ import br.com.figueiredoisaac.javaLanchesWeb.model.User;
 public class RequisicaoLogin {
 	
 	@NotBlank
-	private String nome;
+	private String username;
 	@NotBlank
 	private String password;
 	
-	public String getNome() {
-		return nome;
+	public String getEmail() {
+		return username;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setEmail(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -26,7 +26,7 @@ public class RequisicaoLogin {
 	
 	public User toUser() {
 		User user = new User();
-		user.setNome(this.nome);
+		user.setUsername(this.username);
 		user.setPassword(this.password);
 		return user;
 	}

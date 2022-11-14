@@ -18,16 +18,17 @@ public class UserService {
 		this.userRepository = userRepository;
 	}
 	
-	public void salvar(String email, String nome, String password) {
-		User user = new User(email, nome, password);
+	public void salvar(String username, String password) {
+		User user = new User();
+		user.setUsername(username);
+		user.setPassword(password);
 		userRepository.save(user);
 	}
-	public void salvar(User user) {
-		userRepository.save(user);
-	}
-	public void atualizar(Integer id, String email, String nome, String password) {
-		User user = new User(email, nome, password);
-		user.setId(id);
+
+	public void atualizar(String username, String password) {
+		User user = new User();
+		user.setUsername(username);
+		user.setPassword(password);
 		userRepository.save(user);
 		
 	}
@@ -35,7 +36,7 @@ public class UserService {
 		List<User> users = userRepository.findAll();
 		return users;
 	}
-	public void deletar(Integer id) {
-		userRepository.deleteById(id);
+	public void deletar(String username) {
+		userRepository.deleteByUsername(username);
 	}
 }

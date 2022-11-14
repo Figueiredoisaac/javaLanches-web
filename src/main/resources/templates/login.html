@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="~{base :: head}"></head>
+<style th:inline="text">
+.bg1 {
+	background-image: url([[@{/img/background-login.jpg}]]);
+	background-size: cover;
+}
+</style>
+<body class="bg1">
+	<header th:replace="~{base :: header}"></header>
+	<main>
+		<div class="container-fluid">
+			<div class="row main justify-content-around">
+				<div class="col-4 row card-inicial">
+					<div class="row text-align-center justify-content-center">
+						<img class=" col-4 card-img" th:src="@{/img/login-img.png}"
+							alt="login!">
+						<div class=" col-5 card-titulo">LOGIN</div>
+					</div>
+					<div class="text-align-center titulo-card">
+
+						<form th:action="@{/login}" method="post">
+							<div class="mb-3">
+								<label for="InputUser" class="form-label">E-mail</label> <input
+									name="username" type="email" class="form-control"
+									placeholder="email" />
+							</div>
+							<div class="mb-3">
+								<label for="InputPassword" class="form-label">Senha</label> <input
+									name="password" type="password" class="form-control"
+									placeholder="senha" />
+							</div>
+							<div class="mb-3">
+								<button type="submit" class="btn btn-primary btn-index">LOGIN</button>
+							</div>
+						</form>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+<footer th:replace="~{base :: footer}"></footer>

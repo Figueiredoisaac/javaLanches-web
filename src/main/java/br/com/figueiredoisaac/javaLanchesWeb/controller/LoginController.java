@@ -14,30 +14,12 @@ import br.com.figueiredoisaac.javaLanchesWeb.model.User;
 import br.com.figueiredoisaac.javaLanchesWeb.service.UserService;
 
 @Controller
-@RequestMapping("auth")
+@RequestMapping("/login")
 public class LoginController {
 
-	@Autowired
-	private UserService userService;
-
-	@GetMapping("login")
+	@GetMapping
 	public String login() {
-		return "auth/login";
+		return "login";
 	}
 
-	@PostMapping("autenticado")
-	public String autenticando(RequisicaoLogin requisicaoLogin, Model model) {
-
-		User user = requisicaoLogin.toUser();
-		System.out.println(user.getNome() + " - " +user.getPassword());
-		List<User> temp = userService.visualizar();
-		for (User u : temp) {
-			if (user.getNome().contentEquals( u.getNome()) && user.getPassword().contentEquals(u.getPassword())) {
-				System.out.println(u.getNome() +" - "+ user.getNome());
-				return "cliente/home";
-			}	
-		}
-		System.out.println("autenticação falhou");
-		return "auth/login";
-	}
 }
