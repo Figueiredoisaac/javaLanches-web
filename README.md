@@ -5,7 +5,7 @@ Projeto de um sistema de lanchonete ainda em desenvolvimento com a primeira part
 
 A intenção desse projeto é desenvolver habilidades Maven e Spring.
 Consiste em 3 etapas onde serão desenvolvidas
-  1 - Login e Cadastro;
+  1 - Login e Cadastro; (CONCLUIDA)
   2 - Desenvolvimento da View do Cliente;
   3 - Desenvolvimento da View do Administrador;
 
@@ -21,21 +21,21 @@ JAVA | MAVEN | SPRING.DATA (MySQL) | SPRING.BOOT
 
 # PARTE 1 - LOGIN E CADASTRO
 
-Ao abrir a página essa é a primeira tela, login
-
 ![readme javalanches 1](https://user-images.githubusercontent.com/113912109/200095249-40ef3e0d-b74f-422a-9ace-3486904e93cb.png)
 
 ---
-Tambem temos as telas de Login
+### Tambem temos as telas de Login e Cadastro
 
 ![readme javalanches 2](https://user-images.githubusercontent.com/113912109/200095277-27026b62-578d-4899-ac59-10105b31ce43.png)
 
 ---
-e a tela de Cadastro
+### implementação de bean validation para validação dos campos
+![readme javalanches 4](https://user-images.githubusercontent.com/113912109/201790185-b8ce1c95-751c-4956-9145-a7059ec04f98.png)
 
-![readme javalanches 3](https://user-images.githubusercontent.com/113912109/200095280-b929ebe7-6731-463e-a359-dd8544cf450f.png)
+---
+### implementação do Spring Security e Criptografia como formas de segurança da aplicação
+![readme javalanches 5](https://user-images.githubusercontent.com/113912109/201790272-b047f0bd-3093-40ef-a1f1-550770a22bd6.png)
 
---
 
 # PARTE 2 - VIEW CLIENTE
 
